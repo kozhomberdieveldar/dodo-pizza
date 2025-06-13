@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>О нас — Додо Пицца</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    .about-container { max-width: 800px; margin: 40px auto; background: #fff; border-radius: 16px; box-shadow: 0 2px 16px #0001; padding: 40px; }
+    .about-title { font-size: 2.5rem; margin-bottom: 16px; color: #ff6900; }
+    .about-subtitle { font-size: 1.2rem; color: #888; margin-bottom: 24px; }
+    .about-section { margin-bottom: 32px; }
+    .about-section h2 { color: #ff6900; margin-bottom: 12px; }
+    .about-socials a { margin-right: 18px; font-size: 1.5rem; color: #ff6900; transition: color 0.2s; }
+    .about-socials a:hover { color: #222; }
+  </style>
+</head>
+<body style="background: #f8ecd7;">
+  <div class="about-container">
+    <div class="about-title">О компании Додо Пицца</div>
+    <div class="about-subtitle">Международная сеть пиццерий нового поколения</div>
+    <div class="about-section">
+      <h2>Кто мы?</h2>
+      <p>Додо Пицца — это более 800 пиццерий в 17 странах мира. Мы открыты, технологичны и всегда стремимся к лучшему сервису для наших гостей. Основана в 2011 году Фёдором Овчинниковым.</p>
+    </div>
+    <div class="about-section">
+      <h2>Наши ценности</h2>
+      <ul>
+        <li>Открытость и честность</li>
+        <li>Современные технологии</li>
+        <li>Качество и безопасность продуктов</li>
+        <li>Забота о гостях и сотрудниках</li>
+      </ul>
+    </div>
+    <div class="about-section">
+      <h2>История</h2>
+      <p>Первая пиццерия открылась в Сыктывкаре. Сегодня Додо Пицца — это международный бренд, который развивается по франшизе и собственным силам, внедряя инновации в ресторанном бизнесе.</p>
+    </div>
+    <div class="about-section">
+      <h2>Мы в интернете</h2>
+      <div class="about-socials">
+        <a href="https://dodopizza.ru/" target="_blank"><i class="fas fa-globe"></i></a>
+        <a href="https://t.me/dodopizzaru" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a href="https://vk.com/dodopizza" target="_blank"><i class="fab fa-vk"></i></a>
+        <a href="https://www.youtube.com/user/dodopizzatv" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/dodopizza/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="about-section" style="text-align:center; color:#aaa; font-size:13px;">
+      &copy; 2011–2024 Додо Пицца. Все права защищены.
+    </div>
+    <div style="text-align:center; margin-top:24px;">
+      <a href="/" style="color:#ff6900; text-decoration:underline;">На главную</a>
+    </div>
+  </div>
+</body>
+</html> 

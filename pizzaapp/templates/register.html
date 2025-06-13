@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Регистрация — Додо Пицца</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    .auth-container { max-width: 400px; margin: 60px auto; background: #fff; border-radius: 16px; box-shadow: 0 2px 16px #0001; padding: 32px; }
+    .auth-title { font-size: 2rem; margin-bottom: 18px; color: #ff6900; text-align:center; }
+    .auth-form label { display:block; margin-bottom:6px; color:#888; }
+    .auth-form input { width:100%; margin-bottom:16px; padding:8px 12px; border-radius:6px; border:1px solid #ddd; }
+    .auth-form button { width:100%; background:#ff6900; color:#fff; border:none; border-radius:6px; padding:10px; font-size:1.1rem; cursor:pointer; }
+    .auth-form button:hover { background:#e65c00; }
+    .auth-links { text-align:center; margin-top:18px; }
+    .auth-links a { color:#ff6900; text-decoration:underline; }
+  </style>
+</head>
+<body style="background: #f8ecd7;">
+  <div class="auth-container">
+    <div class="auth-title">Регистрация</div>
+    <form method="post" class="auth-form">
+      {% csrf_token %}
+      <label for="id_username">Email</label>
+      <input type="text" name="username" id="id_username" required>
+      <label for="id_password1">Пароль</label>
+      <input type="password" name="password1" id="id_password1" required>
+      <label for="id_password2">Повторите пароль</label>
+      <input type="password" name="password2" id="id_password2" required>
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+    <div class="auth-links">
+      Уже есть аккаунт? <a href="/login/">Войти</a>
+    </div>
+  </div>
+</body>
+</html> 

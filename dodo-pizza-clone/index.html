@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Додо Пицца - Бишкек</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <div class="logo">
+          <img src="https://dodopizza-a.akamaihd.net/static/Img/Logo/logo.svg" alt="Додо Пицца" />
+        </div>
+        <div class="nav-links">
+          <a href="#" class="nav-link">Пицца</a>
+          <a href="#" class="nav-link">Комбо</a>
+          <a href="#" class="nav-link">Закуски</a>
+          <a href="#" class="nav-link">Десерты</a>
+          <a href="#" class="nav-link">Напитки</a>
+          <a href="#" class="nav-link">Другие товары</a>
+          <a href="#" class="nav-link">Акции</a>
+          <a href="#" class="nav-link">Контакты</a>
+        </div>
+        <div class="nav-buttons">
+          <button class="btn btn-primary" onclick="showLoginModal()">Войти</button>
+          <button class="btn btn-cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span>0 ₽</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Додо Пицца</h1>
+        <p>Доставка пиццы в Бишкеке</p>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="container">
+        <h2>Пицца</h2>
+        <div class="product-grid">
+          <!-- Пепперони -->
+          <div class="product-card">
+            <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg" alt="Пепперони" />
+            <h3>Пепперони</h3>
+            <p>Пикантная пепперони, увеличенная порция моцареллы, томатный соус</p>
+            <div class="product-footer">
+              <div class="price">от 395 ₽</div>
+              <button class="btn btn-order">Выбрать</button>
+            </div>
+          </div>
+
+          <!-- Маргарита -->
+          <div class="product-card">
+            <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/6652fec1-04df-49ba-b554-3ea30b6e701d.jpg" alt="Маргарита" />
+            <h3>Маргарита</h3>
+            <p>Увеличенная порция моцареллы, томаты, итальянские травы, томатный соус</p>
+            <div class="product-footer">
+              <div class="price">от 395 ₽</div>
+              <button class="btn btn-order">Выбрать</button>
+            </div>
+          </div>
+
+          <!-- Четыре сыра -->
+          <div class="product-card">
+            <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/af553bf5-3887-4761-b92a-1968e9cdd1b2.jpg" alt="Четыре сыра" />
+            <h3>Четыре сыра</h3>
+            <p>Сыр блю чиз, сыр чеддер, моцарелла, сыр чеддер, соус альфредо</p>
+            <div class="product-footer">
+              <div class="price">от 395 ₽</div>
+              <button class="btn btn-order">Выбрать</button>
+            </div>
+          </div>
+
+          <!-- Карбонара -->
+          <div class="product-card">
+            <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/2941d0f5-8a45-4a94-8d9c-2d2f8e9c0c1d.jpg" alt="Карбонара" />
+            <h3>Карбонара</h3>
+            <p>Бекон, сыры чеддер и пармезан, моцарелла, томаты, красный лук, чеснок, соус альфредо, итальянские травы</p>
+            <div class="product-footer">
+              <div class="price">от 395 ₽</div>
+              <button class="btn btn-order">Выбрать</button>
+            </div>
+          </div>
+
+          <!-- Ветчина и сыр -->
+          <div class="product-card">
+            <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/1e1a3e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg" alt="Ветчина и сыр" />
+            <h3>Ветчина и сыр</h3>
+            <p>Ветчина, моцарелла, соус альфредо</p>
+            <div class="product-footer">
+              <div class="price">от 395 ₽</div>
+              <button class="btn btn-order">Выбрать</button>
+            </div>
+          </div>
+
+          <!-- Грибная -->
+          <div class="product-card">
+            <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/8c9c0fba-3a7a-4a90-b4ae-a14c2a210da4.jpg" alt="Грибная" />
+            <h3>Грибная</h3>
+            <p>Шампиньоны, увеличенная порция моцареллы, томатный соус</p>
+            <div class="product-footer">
+              <div class="price">от 395 ₽</div>
+              <button class="btn btn-order">Выбрать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Додо Пицца</h4>
+          <p>О нас</p>
+          <p>Додо Книга</p>
+          <p>Блог "Сила ума"</p>
+          <p>Додо ИС</p>
+        </div>
+        <div class="footer-section">
+          <h4>Работа</h4>
+          <p>В пиццерии</p>
+          <p>В контакт-центре</p>
+        </div>
+        <div class="footer-section">
+          <h4>Партнерам</h4>
+          <p>Франшиза</p>
+          <p>Инвестиции</p>
+          <p>Поставщикам</p>
+          <p>Предложить помещение</p>
+        </div>
+        <div class="footer-section">
+          <h4>Это интересно</h4>
+          <p>Почему мы готовим без перчаток?</p>
+          <p>Экскурсии и мастер-классы</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <h3>Вход</h3>
+      <form id="loginForm" onsubmit="handleLogin(event)">
+        <input type="text" placeholder="Имя пользователя" required>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit" class="btn btn-primary">Войти</button>
+      </form>
+      <p>Нет аккаунта? <a href="#" onclick="showRegisterModal()">Зарегистрироваться</a></p>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div class="modal" id="registerModal">
+    <div class="modal-content">
+      <h3>Регистрация</h3>
+      <form id="registerForm" onsubmit="handleRegister(event)">
+        <input type="text" placeholder="Имя пользователя" required>
+        <input type="password" placeholder="Пароль" required>
+        <input type="password" placeholder="Подтвердите пароль" required>
+        <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+      </form>
+      <p>Уже есть аккаунт? <a href="#" onclick="showLoginModal()">Войти</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

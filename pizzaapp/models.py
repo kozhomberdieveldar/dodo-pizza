@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 # Профиль с адресом и телефоном
 class Profile(models.Model):
@@ -10,13 +11,30 @@ class Profile(models.Model):
     def __str__(self):
         return f"Profile of {self.user.username}"
 
+# Категории товаров
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+    slug = models.SlugField(unique=True)
+    description = models.TextField(blank=True)
+    
+    class Meta:
+        verbose_name_plural = 'Categories'
+    
+    def __str__(self):
+        return self.name
+
 # Пицца с рейтингом и популярностью
 class Pizza(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=200)
     description = models.TextField()
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.FloatField(default=0)
-    popularity = models.IntegerField(default=0)  # например, число заказов
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    image = models.ImageField(upload_to='pizzas/', null=True, blank=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products')
+    is_available = models.BooleanField(default=True)
+    popularity = models.IntegerField(default=0)
+    rating = models.DecimalField(max_digits=3, decimal_places=2, default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
@@ -29,7 +47,10 @@ class Review(models.Model):
     comment = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
-# Корзина для пользователя - временное хранение заказа до оплаты
+    class Meta:
+        ordering = ['-created_at']
+
+# Корзина для пользователя
 class CartItem(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='cart_items')
     pizza = models.ForeignKey(Pizza, on_delete=models.CASCADE)
@@ -38,6 +59,9 @@ class CartItem(models.Model):
 
     class Meta:
         unique_together = ('user', 'pizza')
+
+    def get_total_price(self):
+        return self.pizza.price * self.quantity
 
 # Заказ с статусом
 class Order(models.Model):
@@ -49,6 +73,12 @@ class Order(models.Model):
         ('CANCELED', 'Отменён'),
     ]
 
+    PAYMENT_STATUS_CHOICES = [
+        ('NOT_PAID', 'Не оплачен'),
+        ('PAID', 'Оплачен'),
+        ('REFUNDED', 'Возвращён'),
+    ]
+
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='orders')
     pizzas = models.ManyToManyField(Pizza, through='OrderItem')
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='NEW')
@@ -56,10 +86,15 @@ class Order(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     address = models.TextField(blank=True)
     phone = models.CharField(max_length=20, blank=True)
-    payment_status = models.CharField(max_length=20, default='NOT_PAID')
+    payment_status = models.CharField(max_length=20, choices=PAYMENT_STATUS_CHOICES, default='NOT_PAID')
+    delivery_time = models.DateTimeField(null=True, blank=True)
+    comment = models.TextField(blank=True)
 
     def __str__(self):
         return f"Order {self.id} by {self.user.username}"
+
+    class Meta:
+        ordering = ['-created_at']
 
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
@@ -69,3 +104,20 @@ class OrderItem(models.Model):
 
     def get_cost(self):
         return self.price_per_item * self.quantity
+
+# Промокоды
+class PromoCode(models.Model):
+    code = models.CharField(max_length=20, unique=True)
+    discount_percent = models.PositiveIntegerField(default=0)
+    discount_amount = models.DecimalField(max_digits=6, decimal_places=2, default=0)
+    is_active = models.BooleanField(default=True)
+    valid_from = models.DateTimeField()
+    valid_to = models.DateTimeField()
+    min_order_amount = models.DecimalField(max_digits=6, decimal_places=2, default=0)
+
+    def __str__(self):
+        return self.code
+
+    def is_valid(self):
+        now = timezone.now()
+        return self.is_active and self.valid_from <= now <= self.valid_to

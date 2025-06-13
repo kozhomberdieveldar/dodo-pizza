@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Додо Пицца - Бишкек</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <div class="logo">
+          <img src="https://dodopizza-a.akamaihd.net/static/Img/Logo/logo.svg" alt="Додо Пицца" />
+        </div>
+        <div class="nav-links">
+          <a href="#" class="nav-link">Пицца</a>
+          <a href="#" class="nav-link">Комбо</a>
+          <a href="#" class="nav-link">Закуски</a>
+          <a href="#" class="nav-link">Десерты</a>
+          <a href="#" class="nav-link">Напитки</a>
+          <a href="#" class="nav-link">Другие товары</a>
+          <a href="#" class="nav-link">Акции</a>
+          <a href="#" class="nav-link">Контакты</a>
+        </div>
+        <div class="nav-buttons">
+          <a href="/auth/login/google-oauth2/" class="btn btn-social" style="background:#fff; color:#4285F4; border:1px solid #4285F4; margin-right:6px;"><i class="fab fa-google"></i></a>
+          <a href="/auth/login/vk-oauth2/" class="btn btn-social" style="background:#fff; color:#4C75A3; border:1px solid #4C75A3; margin-right:6px;"><i class="fab fa-vk"></i></a>
+          <a href="/auth/login/telegram/" class="btn btn-social" style="background:#fff; color:#229ED9; border:1px solid #229ED9; margin-right:6px;"><i class="fab fa-telegram"></i></a>
+          <a href="/login/" class="btn btn-social" style="background:#fff; color:#222; border:1px solid #222;">Войти</a>
+          <button class="btn btn-cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span>0 ₽</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Додо Пицца</h1>
+        <p>Доставка пиццы в Бишкеке</p>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="container">
+        <div class="products-header">
+          <h2>Меню</h2>
+          <div class="products-controls">
+            <div class="search-box">
+              <input type="text" id="searchInput" placeholder="Поиск...">
+              <button class="btn btn-search" onclick="searchProducts()">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <div class="filters">
+              <select id="sortSelect" onchange="sortProducts()">
+                <option value="name">По названию</option>
+                <option value="price_asc">По возрастанию цены</option>
+                <option value="price_desc">По убыванию цены</option>
+              </select>
+              <div class="price-filter">
+                <input type="number" id="minPrice" placeholder="Мин. цена">
+                <input type="number" id="maxPrice" placeholder="Макс. цена">
+                <button class="btn btn-filter" onclick="filterByPrice()">Применить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-grid">
+          <!-- Товары будут добавлены динамически -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Додо Пицца</h4>
+          <div style="display: flex; flex-direction: row; gap: 18px; align-items: center; margin-top: 12px;">
+            <a href="https://book.dodopizza.ru/" target="_blank" title="Додо Книга"><i class="fas fa-book" style="font-size: 1.5rem; color: #ff6900;"></i></a>
+            <a href="https://blog.dodopizza.ru/" target="_blank" title="Блог 'Сила ума'"><i class="fas fa-lightbulb" style="font-size: 1.5rem; color: #ff6900;"></i></a>
+            <a href="https://dodois.com/" target="_blank" title="Додо ИС"><i class="fas fa-cogs" style="font-size: 1.5rem; color: #ff6900;"></i></a>
+            <a href="https://t.me/dodopizzaru" target="_blank" title="Наш Telegram"><i class="fab fa-telegram" style="font-size: 1.5rem; color: #ff6900;"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Работа</h4>
+          <div style="display: flex; flex-direction: row; gap: 18px; align-items: center; margin-top: 12px;">
+            <a href="https://dodojobs.ru/" target="_blank" title="В пиццерии"><i class="fas fa-pizza-slice" style="font-size: 1.5rem; color: #ff6900;"></i></a>
+            <a href="https://dodojobs.ru/" target="_blank" title="В контакт-центре"><i class="fas fa-headset" style="font-size: 1.5rem; color: #ff6900;"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Партнерам</h4>
+          <div style="display: flex; flex-direction: row; gap: 18px; align-items: center; margin-top: 12px;">
+            <a href="https://dodofranchise.ru/" target="_blank" title="Франшиза"><i class="fas fa-store" style="font-size: 1.5rem; color: #ff6900;"></i></a>
+            <a href="https://dodoinvest.com/" target="_blank" title="Инвестиции"><i class="fas fa-coins" style="font-size: 1.5rem; color: #ff6900;"></i></a>
+            <a href="https://dodopizza.ru/suppliers" target="_blank" title="Поставщикам"><i class="fas fa-truck" style="font-size: 1.5rem; color: #ff6900;"></i></a>
+            <a href="https://dodopizza.ru/realty" target="_blank" title="Предложить помещение"><i class="fas fa-building" style="font-size: 1.5rem; color: #ff6900;"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Это интересно</h4>
+          <div style="display: flex; flex-direction: row; gap: 18px; align-items: center; margin-top: 12px;">
+            <a href="https://dodopizza.ru/about/faq" target="_blank" title="Почему мы готовим без перчаток?"><i class="fas fa-question-circle" style="font-size: 1.5rem; color: #ff6900;"></i></a>
+            <a href="https://dodopizza.ru/about/excursions" target="_blank" title="Экскурсии и мастер-классы"><i class="fas fa-graduation-cap" style="font-size: 1.5rem; color: #ff6900;"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'script.js' %}"></script>
+</body>
+</html> 

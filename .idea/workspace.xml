@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="146ac4d3-fed3-4708-b98f-573055f4aa78" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/dodo-pizza-clone/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dodo-pizza-clone/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pizzaapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/public/dododo.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/public/images" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/components/BottomNav.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/components/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/dodo-pizza-clone/assets/hero-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/components/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/components/PizzaCard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/components/PizzaList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/components/TopNav.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/components/TopNav.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/pages/CartPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/pages/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/pages/Search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodo-pizza-frontend/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodopizza/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dodopizza/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dodopizza/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dodopizza/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pizzaapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pizzaapp/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2yOxoiBfEwBNuhiEotgplDcpdSS" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="146ac4d3-fed3-4708-b98f-573055f4aa78" name="Changes" comment="" />
+      <created>1749719598128</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749719598128</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,0 +1,536 @@
+[
+    {
+        "model": "pizzaapp.category",
+        "pk": 1,
+        "fields": {
+            "name": "Пицца",
+            "slug": "pizza",
+            "description": "Классические и авторские пиццы"
+        }
+    },
+    {
+        "model": "pizzaapp.category",
+        "pk": 2,
+        "fields": {
+            "name": "Напитки",
+            "slug": "drinks",
+            "description": "Газированные напитки, соки и вода"
+        }
+    },
+    {
+        "model": "pizzaapp.category",
+        "pk": 3,
+        "fields": {
+            "name": "Закуски",
+            "slug": "snacks",
+            "description": "Картофель фри, наггетсы и другие закуски"
+        }
+    },
+    {
+        "model": "pizzaapp.category",
+        "pk": 4,
+        "fields": {
+            "name": "Десерты",
+            "slug": "desserts",
+            "description": "Сладкие десерты"
+        }
+    },
+    {
+        "model": "pizzaapp.category",
+        "pk": 5,
+        "fields": {
+            "name": "Кофе",
+            "slug": "coffee",
+            "description": "Горячие кофейные напитки"
+        }
+    },
+    {
+        "model": "pizzaapp.category",
+        "pk": 6,
+        "fields": {
+            "name": "Комбо",
+            "slug": "combo",
+            "description": "Выгодные комбо-наборы"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 1,
+        "fields": {
+            "name": "Песто и Креветка",
+            "description": "Креветки, томаты, шампиньоны, соус песто, моцарелла, итальянские травы, фирменный томатный соус",
+            "price": "595.00",
+            "image": "pizzas/pesto_shrimp.jpg",
+            "category": 1,
+            "is_available": true,
+            "popularity": 10,
+            "rating": 4.8,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 2,
+        "fields": {
+            "name": "Креветки со сладким чили",
+            "description": "Креветки, ананасы, соус сладкий чили, сладкий перец, моцарелла, соус альфредо",
+            "price": "595.00",
+            "image": "pizzas/shrimp_chili.jpg",
+            "category": 1,
+            "is_available": true,
+            "popularity": 8,
+            "rating": 4.7,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 3,
+        "fields": {
+            "name": "Ветчина и сыр",
+            "description": "Ветчина из цыпленка, увеличенная порция моцареллы, соус альфредо",
+            "price": "315.00",
+            "image": "pizzas/ham_cheese.jpg",
+            "category": 1,
+            "is_available": true,
+            "popularity": 9,
+            "rating": 4.6,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 4,
+        "fields": {
+            "name": "Цыпленок ранч",
+            "description": "Цыпленок, ветчина из цыпленка, моцарелла, томаты, чеснок сухой, соус ранч",
+            "price": "495.00",
+            "image": "pizzas/chicken_ranch.jpg",
+            "category": 1,
+            "is_available": true,
+            "popularity": 7,
+            "rating": 4.5,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 5,
+        "fields": {
+            "name": "Комбо Пеппероби",
+            "description": "Квадратная пицца Пепперони 25 см и брелок внутри!",
+            "price": "599.00",
+            "image": "combos/pepperobi_combo.jpg",
+            "category": 6,
+            "is_available": true,
+            "popularity": 6,
+            "rating": 4.9,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 6,
+        "fields": {
+            "name": "2 пиццы",
+            "description": "2 средние пиццы. Цена комбо зависит от выбранных пицц и может быть увеличена",
+            "price": "1265.00",
+            "image": "combos/2_pizzas.jpg",
+            "category": 6,
+            "is_available": true,
+            "popularity": 5,
+            "rating": 4.8,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 7,
+        "fields": {
+            "name": "2 пиццы и напиток",
+            "description": "2 маленькой пиццы (25 см) и 1 литр напитка на выбор!",
+            "price": "1015.00",
+            "image": "combos/2_pizza_drink.jpg",
+            "category": 6,
+            "is_available": true,
+            "popularity": 4,
+            "rating": 4.7,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 8,
+        "fields": {
+            "name": "3 пиццы",
+            "description": "Три средние пиццы на ваш выбор. Цена комбо зависит от выбранных пицц и может быть увеличена",
+            "price": "1845.00",
+            "image": "combos/3_pizzas.jpg",
+            "category": 6,
+            "is_available": true,
+            "popularity": 3,
+            "rating": 4.9,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 9,
+        "fields": {
+            "name": "Паста Креветка и песто",
+            "description": "Паста из печи с соусом песто, креветками, томатами, моцареллой и фирменным соусом альфредо",
+            "price": "445.00",
+            "image": "snacks/pasta_pesto.jpg",
+            "category": 3,
+            "is_available": true,
+            "popularity": 5,
+            "rating": 4.6,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 10,
+        "fields": {
+            "name": "Чикен ролл",
+            "description": "Тонкая пшеничная лепешка: цыпленок, свежие листья салата айсберг, сыр чеддер и пармезан, томаты и соус ранч",
+            "price": "199.00",
+            "image": "snacks/chicken_roll.jpg",
+            "category": 3,
+            "is_available": true,
+            "popularity": 4,
+            "rating": 4.5,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 11,
+        "fields": {
+            "name": "Сырный стартер",
+            "description": "Горячая закуска с очень сырной начинкой. Моцарелла, пармезан, чеддер и соус ранч в тонкой пшеничной лепешке",
+            "price": "189.00",
+            "image": "snacks/cheese_starter.jpg",
+            "category": 3,
+            "is_available": true,
+            "popularity": 3,
+            "rating": 4.4,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 12,
+        "fields": {
+            "name": "Грибной стартер",
+            "description": "Горячая закуска с шампиньонами, моцареллой и соусом ранч в тонкой пшеничной лепешке",
+            "price": "189.00",
+            "image": "snacks/mushroom_starter.jpg",
+            "category": 3,
+            "is_available": true,
+            "popularity": 2,
+            "rating": 4.3,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 13,
+        "fields": {
+            "name": "Кофе Американо",
+            "description": "Пара глотков горячего Американо, и вы будете готовы покорять этот день",
+            "price": "125.00",
+            "image": "coffee/americano.jpg",
+            "category": 5,
+            "is_available": true,
+            "popularity": 2,
+            "rating": 4.7,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 14,
+        "fields": {
+            "name": "Кофе Капучино",
+            "description": "Классический капучино. Для любителей сбалансированного кофейно-молочного вкуса",
+            "price": "175.00",
+            "image": "coffee/cappuccino.jpg",
+            "category": 5,
+            "is_available": true,
+            "popularity": 2,
+            "rating": 4.8,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 15,
+        "fields": {
+            "name": "Карамельный Капучино",
+            "description": "Капучино с карамельным сиропом особенно хорош",
+            "price": "185.00",
+            "image": "coffee/caramel_cappuccino.jpg",
+            "category": 5,
+            "is_available": true,
+            "popularity": 1,
+            "rating": 4.8,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 16,
+        "fields": {
+            "name": "Ванильный Капучино",
+            "description": "Горячий напиток на основе эспрессо со взбитыми сливками и ванильным сиропом",
+            "price": "185.00",
+            "image": "coffee/vanilla_cappuccino.jpg",
+            "category": 5,
+            "is_available": true,
+            "popularity": 1,
+            "rating": 4.8,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 17,
+        "fields": {
+            "name": "Fuse tea Манго-ананас",
+            "description": "Освежающий чай с манго и ананасом",
+            "price": "99.00",
+            "image": "drinks/fuse_mango.jpg",
+            "category": 6,
+            "is_available": true,
+            "popularity": 1,
+            "rating": 4.5,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 18,
+        "fields": {
+            "name": "Fuse tea Манго-ромашка",
+            "description": "Освежающий чай с манго и ромашкой",
+            "price": "99.00",
+            "image": "drinks/fuse_chamomile.jpg",
+            "category": 6,
+            "is_available": true,
+            "popularity": 1,
+            "rating": 4.5,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 19,
+        "fields": {
+            "name": "Piko Апельсин",
+            "description": "Сок Piko с апельсиновым вкусом",
+            "price": "139.00",
+            "image": "drinks/piko_orange.jpg",
+            "category": 6,
+            "is_available": true,
+            "popularity": 1,
+            "rating": 4.5,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 20,
+        "fields": {
+            "name": "Piko Виноград и Алоэ Вера",
+            "description": "Сок Piko с виноградом и алоэ вера",
+            "price": "139.00",
+            "image": "drinks/piko_grape.jpg",
+            "category": 6,
+            "is_available": true,
+            "popularity": 1,
+            "rating": 4.5,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 21,
+        "fields": {
+            "name": "Coca-Cola 0.5л",
+            "description": "Газированный напиток Coca-Cola, 0.5 литра",
+            "price": "99.00",
+            "image": "drinks/coca_cola.jpg",
+            "category": 2,
+            "is_available": true,
+            "popularity": 5,
+            "rating": 4.7,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 22,
+        "fields": {
+            "name": "Sprite 0.5л",
+            "description": "Газированный напиток Sprite, 0.5 литра",
+            "price": "99.00",
+            "image": "drinks/sprite.jpg",
+            "category": 2,
+            "is_available": true,
+            "popularity": 4,
+            "rating": 4.6,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 23,
+        "fields": {
+            "name": "Картофель фри",
+            "description": "Классический картофель фри, порция 100г",
+            "price": "129.00",
+            "image": "snacks/fries.jpg",
+            "category": 3,
+            "is_available": true,
+            "popularity": 6,
+            "rating": 4.8,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 24,
+        "fields": {
+            "name": "Куриные наггетсы",
+            "description": "Хрустящие куриные наггетсы, 6 шт.",
+            "price": "199.00",
+            "image": "snacks/nuggets.jpg",
+            "category": 3,
+            "is_available": true,
+            "popularity": 5,
+            "rating": 4.7,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 25,
+        "fields": {
+            "name": "Чизкейк Нью-Йорк",
+            "description": "Классический чизкейк Нью-Йорк, порция",
+            "price": "195.00",
+            "image": "desserts/cheesecake.jpg",
+            "category": 4,
+            "is_available": true,
+            "popularity": 7,
+            "rating": 4.9,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 26,
+        "fields": {
+            "name": "Медовик",
+            "description": "Торт Медовик, порция",
+            "price": "175.00",
+            "image": "desserts/medovik.jpg",
+            "category": 4,
+            "is_available": true,
+            "popularity": 6,
+            "rating": 4.8,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 27,
+        "fields": {
+            "name": "Американо XL",
+            "description": "Кофе Американо, большой стакан",
+            "price": "145.00",
+            "image": "coffee/americano_xl.jpg",
+            "category": 5,
+            "is_available": true,
+            "popularity": 3,
+            "rating": 4.7,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 28,
+        "fields": {
+            "name": "Латте XL",
+            "description": "Кофе Латте, большой стакан",
+            "price": "185.00",
+            "image": "coffee/latte_xl.jpg",
+            "category": 5,
+            "is_available": true,
+            "popularity": 2,
+            "rating": 4.8,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 29,
+        "fields": {
+            "name": "Комбо Пицца + Напиток",
+            "description": "Средняя пицца и напиток 0.5л на выбор",
+            "price": "699.00",
+            "image": "combos/pizza_drink.jpg",
+            "category": 6,
+            "is_available": true,
+            "popularity": 8,
+            "rating": 4.9,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "pizzaapp.pizza",
+        "pk": 30,
+        "fields": {
+            "name": "Комбо 2 пиццы",
+            "description": "Две средние пиццы на выбор по выгодной цене",
+            "price": "1199.00",
+            "image": "combos/2_pizzas_combo.jpg",
+            "category": 6,
+            "is_available": true,
+            "popularity": 7,
+            "rating": 4.8,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    }
+] 
